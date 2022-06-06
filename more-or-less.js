@@ -14,6 +14,6 @@ function add(one,two){
 }
 
 function sub(one,two){
-    two -= one 
-    return two 
+    one -= two  
+    return one
 }

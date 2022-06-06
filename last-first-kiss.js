@@ -7,7 +7,7 @@ function last(b){
 }
 
 function kiss(c){
-    
-    return c[(c[c.length -1]), 0];
+    const arr = [c[c.length-1], c[0]]
+    return arr;
 }
 

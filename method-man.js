@@ -14,12 +14,7 @@ function yell(str){
 }
 
 function whisper(str){
-    str = words(str);
-    str = str.unshift("*");
-    str[str.length] ="*";
-    str = sentece(str);
-    str = str.toLowerCase();
-    return str 
+    return "*"+str.toLowerCase()+"*";
 }
 
 function capitalize(str){

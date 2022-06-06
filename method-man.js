@@ -10,13 +10,13 @@ function sentence(arr){
 
 function yell(str){
    str = str.toUpperCase();
-    return str 
+   return str 
 }
 
 function whisper(str){
     str = words(str);
     str = str.unshift("*");
-    str = str.push("*");
+    str[str.length] ="*";
     str = sentece(str);
     str = str.toLowerCase();
     return str 

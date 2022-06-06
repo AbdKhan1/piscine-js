@@ -7,5 +7,7 @@ function last(b){
 }
 
 function kiss(c){
-    return c[c[c.length -1], 0];
+    
+    return c[(c[c.length -1]), 0];
 }
+

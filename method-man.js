@@ -1,5 +1,5 @@
 function words(str){
-    str = text.split(" ");
+    str = str.split(" ");
     return str 
 }
 

@@ -1,2 +1,2 @@
-smalls = MIN_VALUE
-biggie = MAX_VALUE
+let smalls = MIN_VALUE
+let biggie = MAX_VALUE

@@ -1,2 +1,2 @@
-let smalls = MIN_VALUE
-let biggie = MAX_VALUE
+let smalls = Number.MIN_VALUE
+let biggie = Number.MAX_VALUE

@@ -9,16 +9,16 @@ function sentence(arr){
 }
 
 function yell(str){
-   str = str.toUpperCase()
+   str = str.toUpperCase();
     return str 
 }
 
 function whisper(str){
-    str = words(str)
-    str = str.unshift("*")
-    str = str.push("*")
-    str = sentece(str)
-    str = str.toLowerCase()
+    str = words(str);
+    str = str.unshift("*");
+    str = str.push("*");
+    str = sentece(str);
+    str = str.toLowerCase();
     return str 
 }
 

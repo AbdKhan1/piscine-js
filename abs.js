@@ -7,7 +7,7 @@ function isPositive(int){
 }
 
 function abs(nums){
-    if (nums>0){
+    if (nums>=0){
         return nums
     }else{
         return nums *-1

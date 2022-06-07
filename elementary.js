@@ -5,7 +5,7 @@ function multiply(a, b) {
             a -= newInt
         }
         return a
-    } else if (b > 0) {
+    } else if (b > 0 && a<0) {
         let newInt = a
         for (let i = 1; i < b; i++) {
             a += newInt

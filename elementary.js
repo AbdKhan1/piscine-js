@@ -1,11 +1,23 @@
 function multiply(a, b) {
-    if (b < 0 && a < 0) {
+    if (a >0 && b>0){
         let newInt = a
-        for (let i = 0; i >= b; i--) {
+        for (let i=1; i<b; i++){
+            a += newInt
+        }
+        return a 
+    }else if (b < 0 && a < 0) {
+        let newInt = a
+        for (let i = 1; i > b; i--) {
             a -= newInt
         }
         return a
-    } else if (b > 0 && a<0) {
+    }else if (b <0 && a >0){
+        let newInt =a
+        for(let i=-1; i>b; i = i-1){
+            a += newInt
+        }
+        return -a
+    }else if (b > 0 && a<0) {
         let newInt = a
         for (let i = 1; i < b; i++) {
             a += newInt
@@ -20,6 +32,7 @@ function multiply(a, b) {
         }
     }
 }
+console.log(multiply(5,3))
 
 function divide(a, b) {
     let newInt = 0;

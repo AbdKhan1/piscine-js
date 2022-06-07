@@ -27,7 +27,7 @@ function indexOf(arr, ele, index) {
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] == ele) {
                 return i
-            }else if(ele != arr[i]){
+            }else{
                 return -1
             }
         }

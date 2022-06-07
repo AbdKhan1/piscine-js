@@ -10,14 +10,14 @@ function includes(arr, value) {
 
 function lastIndexOf(arr, ele, index) {
     if (index >= 0) {
-        for (let i = index; i > 0; i--) {
+        for (let i = index; i >= 0; i--) {
             if (arr[i] == ele) {
                 return i
             }
         }
         return -1
     } else {
-        for (let i = arr.length; i > 0; i--) {
+        for (let i = arr.length; i >= 0; i--) {
             if (arr[i] == ele) {
                 return i
             }

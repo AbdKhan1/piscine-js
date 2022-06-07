@@ -27,7 +27,6 @@ function multiply(a, b) {
         return a
     }
 }
-console.log(multiply(123,0))
 
 function divide(a, b) {
     let newInt = 0;
@@ -46,10 +45,17 @@ function divide(a, b) {
             newInt -= 1
         }
         return newInt;
-    } else {
+    }else if (b<0 && a <0){
+        for (let i=a; i<=b;i= i-b){
+            newInt += 1
+        }
+        return newInt
+    }
+     else {
         return 0;
     }
 }
+console.log(divide(-123,-22))
 
 function modulo(a, b){
     let newInt = divide(a,b);

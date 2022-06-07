@@ -8,7 +8,7 @@ function cutFirst(str){
 
 function cutLast(str){
     let newStr = ""
-    for (let i=0; i <= str.length-2; i++){
+    for (let i=0; i < str.length-2; i++){
         newStr += str[i]
     }
     return newStr
@@ -23,7 +23,7 @@ function cutFirstLast(str){
 
 function KeepFirst(str){
     let newStr = ""
-    for (let i=0;i<3;i++){
+    for (let i=0;i<2;i++){
         newStr = str[i]
     }
     return newStr
@@ -31,7 +31,7 @@ function KeepFirst(str){
 
 function KeepLast(str){
     let newStr = ""
-    for (let i=str.length;i>=str.length-2;i--){
+    for (let i=str.length;i>str.length-2;i--){
         newStr = str[i]
     }
     return newStr

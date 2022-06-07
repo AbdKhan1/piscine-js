@@ -21,15 +21,13 @@ function indexOf(arr, ele, index) {
         for (let i = index; i < arr.length; i++) {
             if (arr[i] == ele) {
                 return i
-            }else if (arr[i] != ele){
-                return -1
             }
         }
     } else {
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] == ele) {
                 return i
-            }else if(arr[i] != ele){
+            }else if(ele != arr[i]){
                 return -1
             }
         }

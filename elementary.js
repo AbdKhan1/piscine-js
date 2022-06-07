@@ -1,5 +1,10 @@
 function multiply(a, b) {
-    if (a >0 && b>0){
+    if (b || a == 0) {
+        if (b || a < 0) {
+            return -0
+        }
+        return 0
+    }else if (a >0 && b>0){
         let newInt = a
         for (let i=1; i<b; i++){
             a += newInt
@@ -23,16 +28,8 @@ function multiply(a, b) {
             a += newInt
         }
         return a
-    } else {
-        if (b || a == 0) {
-            if (b || a < 0) {
-                return -0
-            }
-            return 0
-        }
     }
 }
-console.log(multiply(5,3))
 
 function divide(a, b) {
     let newInt = 0;
@@ -62,4 +59,3 @@ function modulo(a, b){
     let int = a - secondInt
     return int;
 }
-console.log(modulo(5,3))

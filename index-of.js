@@ -21,7 +21,7 @@ function indexOf(arr, ele, index) {
         for (let i = index; i < arr.length; i++) {
             if (arr[i] == ele) {
                 return i
-            }else{
+            }else if (arr[i] != ele){
                 return -1
             }
         }
@@ -29,7 +29,7 @@ function indexOf(arr, ele, index) {
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] == ele) {
                 return i
-            }else{
+            }else if(arr[i] != ele){
                 return -1
             }
         }

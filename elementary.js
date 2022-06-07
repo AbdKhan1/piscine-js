@@ -55,7 +55,7 @@ function divide(a, b) {
         return 0;
     }
 }
-console.log(divide(-123,-22))
+console.log(divide)(-123,-22)
 
 function modulo(a, b){
     let newInt = divide(a,b);

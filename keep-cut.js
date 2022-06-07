@@ -46,4 +46,3 @@ function KeepFirstLast(str) {
     newStr += cut1 + cut2
     return newStr
 }
-console.log(KeepFirstLast('abdef'))

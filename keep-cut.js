@@ -24,16 +24,17 @@ function cutFirstLast(str) {
 
 function keepFirst(str) {
     let newStr = ""
-    for (let i = 0; i <= 2; i++) {
+    for (let i = 0; i < 2; i++) {
         newStr += str[i]
     }
     return newStr
 }
+console.log(keepFirst('abcdef'))
 
 function keepLast(str) {
     let newStr = ""
     let length = str.length - 2
-    for (let i = length; i <= str.length; i++) {
+    for (let i = length; i < str.length; i++) {
         newStr += str[i]
     }
     return newStr

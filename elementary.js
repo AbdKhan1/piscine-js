@@ -1,4 +1,4 @@
-function mulitply(a, b) {
+function multiply(a, b) {
     if (b < 0 && a < 0) {
         let newInt = a
         for (let i = 0; i >= b; i--) {
@@ -46,7 +46,7 @@ function divide(a, b) {
 function modulo(a, b){
     let newInt = divide(a,b)
     let negate = a-b
-    let mod = mulitply(negate, newInt)
+    let mod = multiply(negate, newInt)
     return mod 
 }
 console.log(modulo(5,3))

@@ -1,34 +1,37 @@
-function slice(arr, start, end) {
-    let newArr = []
-    let counter = 0
+function slice (collection,start,end){
+    if (arguments.length===0 && collection.length==0){
+        return null;
+    }else {
+        if (end>=collection.length && end===undefined){
+            end=collection.length;
+        }
 
-    if (start > arr.length) {
-        return newArr
-    } else if (start < 0 && end >= 0) {
-        if (counter < end) {
-            for (let i = start + arr.length, j = 0; i < arr.length; i = i + 1, j = j + 1) {
-                newArr[j] = arr[i]
-                counter++
-            }
+        if (start<0 && -start>collection.length){
+            start=0;
+        }else if (start<0 && -start<collection.length){
+            start =collection.length+start;
         }
-        return newArr
-    } else if ((start < 0 && end <= 0)) {
-        counter = arr.length + end
-        if (counter < end) {
-            for (let i = arr.length + start, j = 0; i < arr.length; i = i + 1, j = j + 1) {
-                newArr[j] = arr[i]
-                counter++
-            }
+
+        if (end<0 && -end>collection.length){
+            end=0;
+        }else if (end<0 && -end<collection.length){
+            end =collection.length+end;
         }
-        return newArr
-    } else if ((start >= 0 || start == undefined) && (end >= 0 && end <= arr.length)) {
-        if (counter < end) {
-            for (let i = start, j = 0; i < arr.length; i = i + 1, j = j + 1) {
-                newArr[j] = arr[i]
-                counter++
+
+        if(Array.isArray(collection)){
+            let tempArray =[];
+            for (let i=start;i<end;i++){
+                tempArray.push(collection[i]);
             }
+            return tempArray;
+        }else if (typeof collection==="string"){
+            let temp="";
+            for (let i=start;i<end;i++){
+                temp+=(collection[i]);
+            }
+              return temp;
+        }else{
+            return null;
         }
-        return newArr
     }
 }
-console.log(slice(('abcdef', 2)))

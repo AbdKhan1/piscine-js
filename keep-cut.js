@@ -24,7 +24,7 @@ function cutFirstLast(str) {
 
 function keepFirst(str) {
     let newStr = ""
-    for (let i = 0; i <=2; i++) {
+    for (let i = 0; i <= 2; i++) {
         newStr += str[i]
     }
     return newStr
@@ -32,7 +32,7 @@ function keepFirst(str) {
 
 function keepLast(str) {
     let newStr = ""
-    let length = str.length-2
+    let length = str.length - 2
     for (let i = length; i <= str.length; i++) {
         newStr += str[i]
     }
@@ -40,7 +40,10 @@ function keepLast(str) {
 }
 
 function keepFirstLast(str) {
-    let newStr =""
+    let newStr = ""
+    if (str.length <= 4) {
+        return str
+    }
     let cut1 = keepFirst(str)
     let cut2 = keepLast(str)
     newStr += cut1 + cut2

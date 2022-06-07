@@ -21,12 +21,16 @@ function indexOf(arr, ele, index) {
         for (let i = index; i < arr.length; i++) {
             if (arr[i] == ele) {
                 return i
+            }else{
+                return -1
             }
         }
     } else {
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] == ele) {
                 return i
+            }else{
+                return -1
             }
         }
     }

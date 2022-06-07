@@ -24,19 +24,28 @@ function cutFirstLast(str) {
 
 function keepFirst(str) {
     let newStr = ""
-    for (let i = 0; i < 2; i++) {
-        newStr += str[i]
+    if (str.length >= 2) {
+        for (let i = 0; i < 2; i++) {
+            newStr += str[i]
+        }
+        return newStr
+    } else {
+        return str
     }
-    return newStr
+
 }
 
 function keepLast(str) {
     let newStr = ""
-    let length = str.length - 2
-    for (let i = length; i < str.length; i++) {
-        newStr += str[i]
+    if (str.length >= 2) {
+        let length = str.length - 2
+        for (let i = length; i < str.length; i++) {
+            newStr += str[i]
+        }
+        return newStr
+    } else {
+        return str
     }
-    return newStr
 }
 
 function keepFirstLast(str) {

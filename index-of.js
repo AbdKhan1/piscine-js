@@ -8,11 +8,21 @@ function includes(arr, value) {
     }
 }
 
-function lastIndexOf(arr, ele) {
-    for (let i = arr.length; i > 0; i--) {
-        if (arr[i] == ele) {
-            return i
+function lastIndexOf(arr, ele, index) {
+    if (index >= 0) {
+        for (let i = index; i > 0; i--) {
+            if (arr[i] == ele) {
+                return i
+            }
         }
+        return -1
+    } else {
+        for (let i = arr.length; i > 0; i--) {
+            if (arr[i] == ele) {
+                return i
+            }
+        }
+        return -1
     }
 }
 
@@ -23,6 +33,7 @@ function indexOf(arr, ele, index) {
                 return i
             }
         }
+        return -1
     } else {
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] == ele) {
@@ -32,4 +43,3 @@ function indexOf(arr, ele, index) {
         return -1
     }
 }
-console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))

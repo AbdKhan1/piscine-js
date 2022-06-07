@@ -29,7 +29,6 @@ function keepFirst(str) {
     }
     return newStr
 }
-console.log(keepFirst('abcdef'))
 
 function keepLast(str) {
     let newStr = ""

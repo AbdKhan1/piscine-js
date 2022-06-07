@@ -1,5 +1,5 @@
 function repeat(str,num){
-    let newStr
+    let newStr = ""     
     for (let i = 1; i <= num; i++){
         newStr += str 
     } 

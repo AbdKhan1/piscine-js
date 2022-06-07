@@ -1,8 +1,8 @@
 function slice (collection,start,end){
-    if (arguments.length===0 && collection.length==0){
+    if (arguments.length===0 || collection.length==0){
         return null;
     }else {
-        if (end>=collection.length && end===undefined){
+        if (end>=collection.length || end===undefined){
             end=collection.length;
         }
 

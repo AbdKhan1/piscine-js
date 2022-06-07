@@ -32,7 +32,7 @@ function KeepFirst(str) {
 
 function KeepLast(str) {
     let newStr = ""
-    length = str.length-2
+    let length = str.length-2
     for (let i = length; i <= str.length; i++) {
         newStr += str[i]
     }

@@ -44,9 +44,9 @@ function divide(a, b) {
 }
 
 function modulo(a, b){
-    let newInt = divide(a,b)
-    let negate = a-b
-    let mod = multiply(negate, newInt)
-    return mod 
+    let newInt = divide(a,b);
+    let secondInt = multiply(newInt,b);
+    let int = a - secondInt
+    return int;
 }
 console.log(modulo(5,3))

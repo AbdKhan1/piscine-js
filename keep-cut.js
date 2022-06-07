@@ -8,12 +8,12 @@ function cutFirst(str){
 
 function cutLast(str){
     let newStr = ""
-    for (let i=0; i >= str.length-2; i--){
+    for (let i=0; i <= str.length-2; i++){
         newStr += str[i]
     }
     return newStr
 }
-
+console.log(cutLast('abcdef'))
 function cutFirstLast(str){
     let cut1 = cutFirst(str)
     let cut2 = cutLast(str)
@@ -31,7 +31,7 @@ function KeepFirst(str){
 
 function KeepLast(str){
     let newStr = ""
-    for (let i=str.length;i>str.length-3;i--){
+    for (let i=str.length;i>=str.length-2;i--){
         newStr = str[i]
     }
     return newStr

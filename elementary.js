@@ -1,8 +1,5 @@
 function multiply(a, b) {
-    if (b || a == 0) {
-        if (b || a < 0) {
-            return -0
-        }
+    if (b == 0 || a ==0) {
         return 0
     }else if (a >0 && b>0){
         let newInt = a
@@ -30,6 +27,7 @@ function multiply(a, b) {
         return a
     }
 }
+console.log(multiply(123,0))
 
 function divide(a, b) {
     let newInt = 0;

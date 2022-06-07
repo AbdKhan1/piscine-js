@@ -17,7 +17,7 @@ function lastIndexOf(arr, ele) {
 }
 
 function indexOf(arr, ele, index) {
-    if (index  != null) {
+    if (index >= 0) {
         for (let i = index; i < arr.length; i++) {
             if (arr[i] == ele) {
                 return i
@@ -27,10 +27,9 @@ function indexOf(arr, ele, index) {
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] == ele) {
                 return i
-            }else{
-                return -1
             }
         }
+        return -1
     }
 }
 console.log(indexOf([1, 2, 3, 4, 5, 4, 3, 2, 1], 2))

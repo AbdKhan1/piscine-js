@@ -70,7 +70,7 @@ function round(num) {
         let remainx10 = multiply(remainder, 10)
         if (remainx10 >= 5) {
             num = num + 1
-        } else if (remainx10 <= 5) {
+        } else if (remainx10 < 5) {
             num = num - 1
         }
         return num - remainder

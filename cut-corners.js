@@ -64,19 +64,20 @@ function modulo(a, b) {
 }
 
 function round(num) {
-
-    if (num >= 0) {
+    if (num == 0){
+        return 0
+    }else if (num >= 1) {
         let remainder = modulo(num, 1)
         let remainx10 = multiply(remainder, 10)
         if (remainx10 >= 5) {
             num = num + 1
-        } else if (remainx10 < 5 && remainx10 >0) {
+        } else if (remainx10 < 5 && remainx10 >= 1) {
             num = num - 1
         }else if(remainx10 >= 0){
             return trunc(num)
         }
         return num - remainder
-    } else if (num <= 0) {
+    } else if (num <= -1) {
         let remainder = modulo(num, 1)
         let remainx10 = multiply(remainder, 10)
         if (remainx10 > -5) {
@@ -88,6 +89,7 @@ function round(num) {
     }
 }
 console.log(round(-3.45))
+
 function floor(num) {
     let remainder = modulo(num, 1)
     if (num < 0) {
@@ -117,4 +119,3 @@ function trunc(num) {
         return num - remainder
     }
 }
-console.log(trunc(5.95))

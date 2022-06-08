@@ -64,8 +64,8 @@ function modulo(a, b) {
 }
 
 function round(num) {
-    if (num == 0) {
-        return 0
+    if (num == Number.POSITIVE_INFINITY || num == Number.NEGATIVE_INFINITY || num == 0) {
+        return num;
     } else if (num >= 0) {
         let remainder = modulo(num, 1)
         let remainx10 = multiply(remainder, 10)
@@ -91,29 +91,37 @@ function round(num) {
 console.log(round(-3.45))
 
 function floor(num) {
-    let remainder = modulo(num, 1)
-    if (num < 0) {
-        return (num = num - 1) - remainder
+    if (num == Number.POSITIVE_INFINITY || num == Number.NEGATIVE_INFINITY || num == 0) {
+        return num;
+    } else {
+        let remainder = modulo(num, 1)
+        if (num < 0) {
+            return (num = num - 1) - remainder
+        }
+        return (num - remainder)
     }
-    return (num - remainder)
 }
 
 function ceil(num) {
-    let remainder = modulo(num, 1)
-    let remainderx10 = multiply(remainder, 1)
-    if (num < 0) {
-        return num - remainder
-    } else if (remainderx10 > 0) {
-        return (num + 1) - remainder
+    if (num == Number.POSITIVE_INFINITY || num == Number.NEGATIVE_INFINITY || num == 0) {
+        return num;
     } else {
-        return num
+        let remainder = modulo(num, 1)
+        let remainderx10 = multiply(remainder, 1)
+        if (num < 0) {
+            return num - remainder
+        } else if (remainderx10 > 0) {
+            return (num + 1) - remainder
+        } else {
+            return num
+        }
     }
 }
 
 function trunc(num) {
-    if (num == 0){
-        return 0
-    }else if (num > 0) {
+    if (num == Number.POSITIVE_INFINITY || num == Number.NEGATIVE_INFINITY || num == 0) {
+        return num;
+    } else if (num > 0) {
         let remainder = modulo(num, 1)
         return num - remainder
     } else if (num < 0) {

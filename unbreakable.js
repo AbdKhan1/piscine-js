@@ -50,10 +50,13 @@ function split(str, splitter) {
 }
 
 
-function join(arr, joiner) {
-    let newStr = ""
+function join(arr, char) {
+    let str = "";
     for (let i = 0; i < arr.length; i++) {
-        newStr += (arr[i] + joiner)
+      str += arr[i];
+      if (i !== arr.length - 1) {
+        str += char;
+      }
     }
-    return newStr
-}
+    return str;
+  }

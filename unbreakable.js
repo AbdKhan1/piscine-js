@@ -4,7 +4,7 @@ function split(str, splitter, num) {
     for (let i = 0, j = 0; i < str.length; i++) {
         if (str[i] != splitter) {
             tempStr += str[i]
-        } else if (str[i] = splitter) {
+        } else if (str[i] === splitter) {
             if (num == j + 1) {
                 return newArr
             }
@@ -16,7 +16,6 @@ function split(str, splitter, num) {
     newArr[newArr.length] = tempStr
     return newArr
 }
-// console.log(split('a b c', ','))
 
 function join(arr, joiner) {
     let newStr = ""

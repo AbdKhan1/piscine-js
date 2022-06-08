@@ -9,4 +9,12 @@ function split(str, splitter) {
     }
     return newArr
 }
+
+function join(arr,joiner){
+    let newStr = ""
+    for(let i=0; i<arr.length;i++){
+        newStr += (arr[i]+joiner)
+    }
+    return newStr 
+}
 console.log(split('abcdefg,qwerty,opasdf', ','))

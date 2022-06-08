@@ -64,16 +64,28 @@ function modulo(a, b) {
 }
 
 function round(num) {
-    let remainder = modulo(num, 1)
-    let remainx10 = multiply(remainder, 10)
-    if (remainx10 >= 5) {
-        num = num + 1
-    } else if (remainx10 <= 5) {
-        num = num - 1
-    }
-    return num - remainder
-}
 
+    if (num >= 0) {
+        let remainder = modulo(num, 1)
+        let remainx10 = multiply(remainder, 10)
+        if (remainx10 >= 5) {
+            num = num + 1
+        } else if (remainx10 <= 5) {
+            num = num - 1
+        }
+        return num - remainder
+    } else if (num <= 0) {
+        let remainder = modulo(num, 1)
+        let remainx10 = multiply(remainder, 10)
+        if (remainx10 > -5) {
+            return trunc(num)
+        } else if (remainx10 <= -5) {
+            num = num - 1
+            return trunc(num)
+        }
+    }
+}
+console.log(round(-3.45))
 function floor(num) {
     let remainder = modulo(num, 1)
     if (num < 0) {
@@ -84,7 +96,7 @@ function floor(num) {
 
 function ceil(num) {
     let remainder = modulo(num, 1)
-    let remainderx10 = multiply(remainder,1)
+    let remainderx10 = multiply(remainder, 1)
     if (num < 0) {
         return num - remainder
     } else if (remainderx10 > 0) {
@@ -94,8 +106,13 @@ function ceil(num) {
     }
 }
 
-function trunc(num){
-    let remainder = modulo(num, 1)
-    return num-remainder   
+function trunc(num) {
+    if (num > 0) {
+        let remainder = modulo(num, 1)
+        return num - remainder
+    } else if (num < 0) {
+        let remainder = modulo(num, -1)
+        return num - remainder
+    }
 }
 console.log(trunc(5.95))

@@ -13,7 +13,6 @@ function split(str, splitter) {
     newArr[newArr.length] = tempStr
     return newArr
 }
-console.log(split('dog eats water', 'water'))
 
 function join(arr, joiner) {
     let newStr = ""

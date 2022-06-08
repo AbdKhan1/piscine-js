@@ -111,6 +111,9 @@ function ceil(num) {
 }
 
 function trunc(num) {
+    if (num == 0){
+        return 0
+    }
     if (num > 0) {
         let remainder = modulo(num, 1)
         return num - remainder

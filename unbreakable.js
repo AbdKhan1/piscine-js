@@ -17,4 +17,3 @@ function join(arr,joiner){
     }
     return newStr 
 }
-console.log(split('abcdefg,qwerty,opasdf', ','))

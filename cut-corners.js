@@ -64,20 +64,20 @@ function modulo(a, b) {
 }
 
 function round(num) {
-    if (num == 0){
+    if (num == 0) {
         return 0
-    }else if (num >= 1) {
+    } else if (num >= 0) {
         let remainder = modulo(num, 1)
         let remainx10 = multiply(remainder, 10)
         if (remainx10 >= 5) {
             num = num + 1
         } else if (remainx10 < 5 && remainx10 >= 1) {
-            num = num - 1
-        }else if(remainx10 >= 0){
+            return trunc(num)
+        } else if (remainx10 >= 0) {
             return trunc(num)
         }
         return num - remainder
-    } else if (num <= -1) {
+    } else if (num <= 0) {
         let remainder = modulo(num, 1)
         let remainx10 = multiply(remainder, 10)
         if (remainx10 > -5) {

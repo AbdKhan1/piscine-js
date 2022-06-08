@@ -16,6 +16,7 @@ function split(str, splitter, num) {
     newArr[newArr.length] = tempStr
     return newArr
 }
+console.log(split('a b c', ' '))
 
 function join(arr, joiner) {
     let newStr = ""

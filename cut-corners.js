@@ -119,9 +119,15 @@ function ceil(num) {
 }
 
 function trunc(num) {
-    if (num == Number.POSITIVE_INFINITY || num == Number.NEGATIVE_INFINITY || num == 0) {
+    if (num==Number.POSITIVE_INFINITY || num==Number.NEGATIVE_INFINITY ||num==0){
         return num;
-    } else if (num > 0) {
+    }else if (num>=0xfffffffff){
+        let newNum=num-0xfffffffff;
+        let remainder=modulo(newNum,1);
+        let newNum2=newNum-remainder;
+      let result=0xfffffffff+newNum2;
+      return result; 
+    }else if (num > 0) {
         let remainder = modulo(num, 1)
         return num - remainder
     } else if (num < 0) {

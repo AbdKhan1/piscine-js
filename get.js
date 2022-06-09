@@ -1,8 +1,8 @@
 function get(src, path) {
-    for (key in src){
-        if (src.hasOwnProperty(key)){
+    for (let key in src) {
+        if (src.hasOwnProperty(key)) {
             path = src[key]
-            return path 
+            return path
         }
     }
 }

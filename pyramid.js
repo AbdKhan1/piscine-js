@@ -3,7 +3,7 @@ function pyramid(str, num) {
     let j = 0
     let counter = 1
     let extraCounter = 1
-    let counter2 = 0
+    let counter2 = 1
     let extraCounter2 = 1
     for (let i = 1; i <= num; i++) {
         if (j >= 1) {

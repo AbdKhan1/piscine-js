@@ -1,9 +1,7 @@
 function get(src, path) {
-    for (let key in src) {
-        if (src.hasOwnProperty(key)) {
-            path = src[key]
-            return path
-        }
+    let arr =[path.split(".")]
+    for (let i=0; i<arr.length;i++){
+        src = src[arr[i]]
     }
+    return src 
 }
-get({ nested: { key: 'value' } }, 'nested.key') === 'value'

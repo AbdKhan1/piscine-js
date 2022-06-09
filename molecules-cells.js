@@ -9,13 +9,13 @@ function RNA(str) {
             newStr += 'A'
         } else if (str[i] === 'A') {
             newStr += 'U'
-        } else {
+        } else if(str === '') {
             return str
         }
     }
     return newStr
 }
-
+console.log(RNA('TAGC'), 'AUCG')
 function DNA(str) {
     let newStr = ""
     for (let i = 0; i < str.length; i++) {
@@ -27,7 +27,7 @@ function DNA(str) {
             newStr += 'T'
         } else if (str[i] === 'U') {
             newStr += 'A'
-        } else {
+        } else if (str === '') {
             return str
         }
     }

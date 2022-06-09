@@ -1,5 +1,5 @@
 function get(src, path) {
-    let arr = [path.split(".")]
+    let arr = path.split(".")
     for (let i = 0; i < arr.length; i++) {
         src = src[arr[i]]
     }

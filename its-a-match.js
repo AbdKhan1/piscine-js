@@ -1,4 +1,4 @@
-const normal = new RegExp("hi", "g");
-const begin = new RegExp('\\b^(hi)\\b', 'g');
-const end = new RegExp('\\b$(hi)\\b', 'g');
-const beginEnd = new RegExp('\\b$^(hi)\\b', 'g');
+const normal = new RegExp("hi");
+const begin = new RegExp("^(hi)");
+const end = new RegExp("$(hi)");
+const beginEnd = new RegExp("$^(hi)");

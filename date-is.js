@@ -1,5 +1,16 @@
 function isValid(date) {
-    return date > 0 && date != null
+    var dt = new Date(y, m, d, 0, 0, 0, 0);
+
+    // get the month, day, and year from the object we just created 
+    var mon = dt.getMonth();
+    var day = dt.getDate();
+    var yr = dt.getYear();
+
+    // if they match then the date is valid
+    if (mon == m && yr == y && day == d)
+        return true;
+    else
+        return false;
 }
 
 function isAfter(date1, date2) {

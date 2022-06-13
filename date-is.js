@@ -1,9 +1,5 @@
-function isValid(date) {
-    if (Date.Parse(date) != NaN) {
-        return true
-    } else {
-        false
-    }
+const isValid = (date) => {
+    return (new Date(date) !== "Invalid Date") && !isNaN(new Date(date));
 }
 
 function isAfter(date1, date2) {

@@ -1,5 +1,5 @@
-const isValid = (date) => {
-    return (new Date(date) !== "Invalid Date") && !isNaN(new Date(date));
+function isValid(date){
+    return date instanceof Date && !isNaN(date.valueOf())
 }
 
 function isAfter(date1, date2) {

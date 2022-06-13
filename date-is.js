@@ -1,9 +1,8 @@
 function isValid(date) {
-    var date_regex = new RegExp('/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/');
-    if (!(date_regex.test(date))) {
-        return false;
-    } else {
+    if (Date.Parse(date) != NaN) {
         return true
+    } else {
+        false
     }
 }
 

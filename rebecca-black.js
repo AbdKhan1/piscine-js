@@ -27,6 +27,14 @@ function isLeapYear(date) {
 
 function isLastDayOfMonth(date) {
     let d = new Date(date)
+    if (isLeapYear(date)) {
+        var lastDay = (d.getFullYear(), d.getMonth() + 2, 0);
+        if (lastDay === date) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     var lastDay = (d.getFullYear(), d.getMonth() + 1, 0);
     if (lastDay == date) {
         return true;

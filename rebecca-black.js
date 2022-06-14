@@ -34,10 +34,11 @@ function isLastDayOfMonth(date) {
             return false;
         }
     }
-    var lastDay = (d.getFullYear(), d.getMonth() + 1, 0);
-    if (lastDay == date) {
+    d.setDate(1); // going to 1st of the month
+    d.setHours(-1);
+    if (d == date) {
         return true;
     } else {
-        return false
+        return false;
     }
 }

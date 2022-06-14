@@ -31,7 +31,13 @@ function isLastDayOfMonth(date) {
         if (d.getMonth() === 1 && d.getDate() === 29) {
             return true;
         } else {
-            return false;
+            d.setDate(1); // going to 1st of the month
+            d.setHours(-1);
+            if (d == date) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
     d.setDate(1); // going to 1st of the month

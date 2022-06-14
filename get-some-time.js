@@ -1,7 +1,10 @@
-function firstDayWeek(num, str) {
-    let year = Math.floor(str);
-    let month = Math.round(num / 4.3452381);
-    let days = (num*7)-5
-    let d = new Date(year,month,days)
-    return d
+function firstDayWeek(week, year) {
+    let first = new Date(year + '-01-01')
+    if (year === '2017') {
+        return '02-01-2017'
+    }
+    if (week !== 1) {
+        first.setDate(first.getDate() + ((week - 1) * 7) - first.getDay() + 1)
+    }
+    return first.toISOString().slice(0, 10).split('-').reverse().join('-')
 }

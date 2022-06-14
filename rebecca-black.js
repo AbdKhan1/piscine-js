@@ -28,23 +28,8 @@ function isLeapYear(date) {
 function isLastDayOfMonth(date) {
     let d = new Date(date)
     if (isLeapYear(date)) {
-        if (d.getMonth() === 1 && d.getDate() === 29) {
-            return true;
-        } else {
-            d.setDate(1); // going to 1st of the month
-            d.setHours(-1);
-            if (d == date) {
-                return true;
-            } else {
-                return false;
-            }
-        }
+        return (d.getMonth() === 1 && d.getDate() === 29)
     }
-    d.setDate(1); // going to 1st of the month
-    d.setHours(-1);
-    if (d == date) {
-        return true;
-    } else {
-        return false;
-    }
+    var lastDay = (d.getFullYear(), d.getMonth() + 1, 0);
+    return (lastDay.getTime() == date.getTime())
 }

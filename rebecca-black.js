@@ -25,11 +25,14 @@ function isLeapYear(date) {
     }
 }
 
-function isLastDayOfMonth(date) {
-    let d = new Date(date)
-    if (isLeapYear(date)) {
-        return (d.getMonth() === 1 && d.getDate() === 29)
+function isLastDayOfMonth(date){
+    let d=new Date(date)
+    if (isLeapYear(d)&& d.getMonth()===1 &&  d.getDate()===29){
+        return true
+    }else if (!isLeapYear(d) && d.getMonth()===2 && d.getDate()===28){
+        return true
+    }else {
+        let lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0)
+        return d.getTime()===lastDay.getTime()
     }
-    var lastDay = (d.getFullYear(), d.getMonth() + 1, 0);
-    return (lastDay.getTime() == date.getTime())
 }

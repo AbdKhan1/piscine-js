@@ -13,6 +13,7 @@ const filter1DistinctVowel = array => array.filter(word => {
     return arr.every(v => v.toLowerCase() === arr[0].toLowerCase())//make sure all vowels are equial and compare values
 })
 
-const multiFilter = array => array.filter(obj => {
-    return (/^[b-df-hj-np-tv-z]/gi.test(obj.name)) && (obj.capital.length >= 8) && (obj.tag.match(/[aeiouAEIOU]/g).length >= 1) && (obj.region != 'South')
-})
+const multiFilter = array => array.filter(obj => (
+    (/^[b-df-hj-np-tv-z]/gi.test(obj.name)) && (obj.capital.length >= 8) && (obj.tag.match(/[aeiouAEIOU]/g).length >= 1) && (obj.region != 'South')
+)
+)

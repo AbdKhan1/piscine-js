@@ -3,9 +3,8 @@ function filterShortStateName(arr) {
 }
 
 
-function filterStartVowel(arr) {
-    return arr.filter(element => /^[aeiou]/i.test(element))
-}
+const filterStartVowel = array => array.filter(element => /^[aeiou]/i.test(element))
+
 
 const filter5Vowels = array => array.filter(word => word.match(/[aeiouAEIOU]/g).length >= 5)
 
@@ -15,5 +14,5 @@ const filter1DistinctVowel = array => array.filter(word => {
 })
 
 const multiFilter = array => array.filter(obj => {
-    return (filterStartVowel(obj.name) === 0) && (obj.capital.length >= 8) && (obj.tag.match(/[aeiouAEIOU]/g).length >= 1) && (obj.region != 'South')
+    return (/^[b-df-hj-np-tv-z]/gi.test(obj.name)) && (obj.capital.length >= 8) && (obj.tag.match(/[aeiouAEIOU]/g).length >= 1) && (obj.region != 'South')
 })

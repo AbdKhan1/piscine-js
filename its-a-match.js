@@ -1,4 +1,4 @@
-const normal = new RegExp("hi");
-const begin = new RegExp("^(hi)");
-const end = new RegExp("$(hi)");
-const beginEnd = new RegExp(begin+end);
+let normal= new RegExp('hi')
+let begin= new RegExp('^hi')
+let end=new RegExp('hi$')
+let beginEnd= new RegExp('^hi$')

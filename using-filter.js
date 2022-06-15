@@ -14,6 +14,9 @@ const filter1DistinctVowel = array => array.filter(word => {
 })
 
 const multiFilter = array => array.filter(obj => (
-    (/^[b-df-hj-np-tv-z]/gi.test(obj.name)) && (obj.capital.length >= 8) && (obj.tag.match(/[aeiouAEIOU]/g).length >= 1) && (obj.region != 'South')
+    obj.capital.length > 7 &&
+    filterStartVowel([obj.name]).length == 0 &&
+    (/[aeiouAEIOU]/g).test(obj.tag) == true &&
+    obj.region != 'South'
 )
 )

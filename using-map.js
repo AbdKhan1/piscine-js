@@ -13,7 +13,10 @@ function fahrenheitToCelsius(arr){
 }
 
 function trimTemp(arr){
-    return arr.map(element => element.temperature = element.temperature.replace(/\s/g, ''))
+    return arr.map(element => {
+        element.temperature = element.temperature.replace(/\s/g, '')
+        return element
+    });
 }
 
 function tempForecasts(arr){

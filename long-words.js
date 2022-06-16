@@ -1,5 +1,5 @@
 const longWords = arr => arr.every(x => {
-    return typeof x === 'String' && x.length >= 5
+    return x.length >= 5
 });
 
 const oneLongWord = arr => arr.some(x => {

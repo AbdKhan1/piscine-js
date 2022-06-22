@@ -1,7 +1,7 @@
 function invert(obj){
-    var retobj = {};
-    for(var key in obj){
-    retobj[obj[key]] = key;
- }
+    const retobj = {};
+    Object.keys(obj).forEach(key =>{
+        ret[obj[key]]=key;
+    })
     return retobj;
 }

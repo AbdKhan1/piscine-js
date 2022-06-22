@@ -21,7 +21,6 @@ const fusion=(first,second)=>{
         keys.forEach((key) => {
             res[key] = fusion(first[key], second[key])
         })
-    
         return res
     }
 }
